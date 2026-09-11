@@ -1,0 +1,1349 @@
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:#050914;
+    color:#f6f7ff;
+    font:14px Arial,sans-serif;
+}
+
+.wrap{
+    width:min(1120px,92%);
+    margin:auto;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:9;
+    background:#060a15ee;
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #18223a;
+}
+
+.nav{
+    height:74px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.brand>b{
+    width:42px;
+    height:42px;
+    border:2px solid #367cff;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    font-size:27px;
+    color:#6cb5ff;
+}
+
+.brand strong{
+    font-size:18px;
+}
+
+.brand i{
+    font-style:normal;
+    color:#735eff;
+}
+
+.brand small{
+    display:block;
+    font-size:9px;
+    color:#8791a5;
+    letter-spacing:1px;
+}
+
+nav{
+    display:flex;
+    gap:24px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#806aff;
+}
+
+.menu{
+    display:none;
+    background:none;
+    border:0;
+    color:#fff;
+    font-size:25px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    padding:70px 0;
+
+    background:
+    radial-gradient(
+        circle at 75% 45%,
+        #32207b44,
+        transparent 35%
+    );
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+}
+
+.eyebrow{
+    color:#9c86ff;
+    font-weight:bold;
+}
+
+.hero h1{
+    font-size:clamp(38px,5vw,60px);
+    line-height:1.05;
+    margin:15px 0;
+}
+
+.hero h1 span{
+    background:linear-gradient(
+        90deg,
+        #a35aff,
+        #15bfe8
+    );
+
+    background-clip:text;
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+.hero p{
+    color:#a9b2c5;
+    font-size:17px;
+    max-width:600px;
+}
+
+
+/* =========================
+   BOTONES HERO
+========================= */
+
+.actions{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+    margin:28px 0;
+
+    width:100%;
+    max-width:560px;
+}
+
+
+/* FILA SUPERIOR */
+
+.main-buttons{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+    width:100%;
+}
+
+
+/* FILA INFERIOR */
+
+.support-buttons{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+    width:100%;
+}
+
+
+.btn{
+    padding:13px 19px;
+
+    border-radius:9px;
+
+    font-weight:bold;
+
+    font-size:11px;
+
+    display:inline-block;
+
+    text-align:center;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease,
+        background .2s ease;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   VER FAUCETS
+   VIOLETA ORIGINAL
+========================= */
+
+.primary{
+
+    background:linear-gradient(
+        100deg,
+        #463cff,
+        #7935e7
+    );
+
+    color:#fff;
+
+    border:1px solid #6659ff;
+
+    box-shadow:
+        0 6px 20px #463cff33;
+}
+
+.primary:hover{
+
+    background:linear-gradient(
+        100deg,
+        #5148ff,
+        #853ff0
+    );
+
+    border-color:#8378ff;
+
+    box-shadow:
+        0 8px 28px #463cff66;
+}
+
+
+/* =========================
+   VER MINERÍA
+   AZUL OSCURO ORIGINAL
+========================= */
+
+.secondary{
+
+    background:#10182b;
+
+    border:1px solid #53617e;
+
+    color:#ffffff;
+
+    box-shadow:
+        0 5px 18px #00000033;
+}
+
+.secondary:hover{
+
+    background:#17223a;
+
+    border-color:#7d8fb8;
+
+    box-shadow:
+        0 8px 25px #00000055;
+}
+
+
+/* =========================
+   DONAR CON CRYPTO
+   NARANJA
+========================= */
+
+.donate,
+.donate-btn{
+
+    background:linear-gradient(
+        100deg,
+        #ff6b00,
+        #ff9d00
+    );
+
+    border:1px solid #ffae3d;
+
+    color:#fff;
+
+    box-shadow:
+        0 6px 22px #ff760044;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.donate:hover,
+.donate-btn:hover{
+
+    background:linear-gradient(
+        100deg,
+        #ff7b00,
+        #ffae00
+    );
+
+    border-color:#ffc76b;
+
+    box-shadow:
+        0 8px 30px #ff760077;
+}
+
+
+/* =========================
+   DONAR PAYPAL
+   NARANJA
+========================= */
+
+.paypal{
+
+    background:linear-gradient(
+        100deg,
+        #ff6b00,
+        #ff9d00
+    );
+
+    border:1px solid #ffae3d;
+
+    color:#fff;
+
+    box-shadow:
+        0 6px 22px #ff760044;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.paypal:hover{
+
+    background:linear-gradient(
+        100deg,
+        #ff7b00,
+        #ffae00
+    );
+
+    border-color:#ffc76b;
+
+    box-shadow:
+        0 8px 30px #ff760077;
+}
+
+
+/* =========================
+   EFECTO BRILLO DONACIONES
+========================= */
+
+.donate,
+.donate-btn,
+.paypal{
+    font-weight:800;
+}
+
+.donate::before,
+.donate-btn::before,
+.paypal::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:70%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #ffffff33,
+        transparent
+    );
+
+    transform:skewX(-20deg);
+
+    transition:left .6s ease;
+}
+
+.donate:hover::before,
+.donate-btn:hover::before,
+.paypal:hover::before{
+    left:130%;
+}
+
+
+/* =========================
+   TRUST
+========================= */
+
+.trust{
+    display:flex;
+    gap:22px;
+    margin-top:28px;
+}
+
+.trust>div{
+    display:flex;
+    gap:8px;
+    color:#24d6ff;
+}
+
+.trust span{
+    color:#fff;
+}
+
+.trust b,
+.trust small{
+    display:block;
+}
+
+.trust small{
+    color:#8791a5;
+    font-size:10px;
+    font-weight:normal;
+}
+
+
+/* =========================
+   IMAGEN HERO
+========================= */
+
+.art{
+    min-height:330px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+}
+
+.art img{
+    width:100%;
+    max-width:460px;
+    height:auto;
+
+    object-fit:contain;
+
+    filter:drop-shadow(
+        0 0 28px #4137ff
+    );
+
+    transition:
+        transform .3s ease,
+        filter .3s ease;
+}
+
+.art img:hover{
+    transform:scale(1.03);
+
+    filter:drop-shadow(
+        0 0 38px #5548ff
+    );
+}
+
+
+/* =========================
+   ESTADÍSTICAS
+========================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    background:#0b1120;
+
+    border:1px solid #1a2641;
+
+    border-radius:12px;
+
+    padding:20px;
+}
+
+.stats div{
+    text-align:center;
+
+    border-right:1px solid #202a40;
+}
+
+.stats div:last-child{
+    border:0;
+}
+
+.stats b,
+.stats small{
+    display:block;
+}
+
+.stats b{
+    font-size:20px;
+}
+
+.stats small{
+    color:#8791a5;
+    font-size:11px;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.section{
+    padding:42px 0;
+}
+
+.title{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+
+    margin-bottom:17px;
+}
+
+.title h2{
+    margin:0;
+}
+
+.title p,
+.title>a{
+    color:#8791a5;
+    font-size:11px;
+}
+
+.title>a{
+    color:#8e7aff;
+    font-weight:bold;
+}
+
+
+/* =========================
+   CARDS FAUCETS
+========================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.card{
+    background:#0b1222;
+
+    border:1px solid #1b2742;
+
+    border-radius:12px;
+
+    padding:17px;
+
+    display:flex;
+    flex-direction:column;
+
+    min-height:360px;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+
+    border-color:#493f9e;
+
+    box-shadow:
+        0 12px 35px #00000044;
+}
+
+.featured{
+    border-color:#4c3ed4;
+}
+
+
+/* =========================
+   ICONOS GRANDES
+========================= */
+
+.circle{
+    width:125px;
+    height:125px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin:0 auto 10px;
+
+    overflow:hidden;
+
+    background:#17213a;
+
+    border:1px solid #273657;
+
+    padding:0;
+
+    position:relative;
+}
+
+.circle img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+    object-position:center;
+
+    padding:0;
+    margin:0;
+
+    display:block;
+}
+
+.circle img[src$=".png"]{
+    transform:scale(1.12);
+}
+
+
+/* =========================
+   TEXTO CARDS
+========================= */
+
+.card h3{
+    text-align:center;
+
+    margin:8px 0 5px;
+
+    font-size:18px;
+
+    line-height:1.2;
+}
+
+.chips{
+    text-align:center;
+
+    background:#161f34;
+
+    border-radius:5px;
+
+    padding:5px;
+
+    color:#cdd4e3;
+
+    font-size:10px;
+}
+
+.card p{
+    color:#99a3b7;
+
+    font-size:11px;
+
+    line-height:1.35;
+
+    min-height:48px;
+
+    margin:10px 0;
+}
+
+.card small{
+    color:#579dff;
+    font-size:10px;
+}
+
+.card>b{
+    font-size:12px;
+    margin-bottom:12px;
+}
+
+.card .btn{
+    margin-top:auto;
+}
+
+
+/* =========================
+   MINERÍA / ENCUESTAS
+========================= */
+
+.two{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+}
+
+.list{
+    display:grid;
+    gap:10px;
+}
+
+.list article{
+    background:#0b1222;
+
+    border:1px solid #1b2742;
+
+    border-radius:9px;
+
+    padding:12px;
+
+    display:grid;
+
+    grid-template-columns:82px 1fr auto;
+
+    gap:15px;
+
+    align-items:center;
+
+    min-height:100px;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.list article:hover{
+
+    transform:translateY(-2px);
+
+    border-color:#493f9e;
+
+    box-shadow:
+        0 8px 24px #00000033;
+}
+
+
+/* =========================
+   ICONOS LISTA
+========================= */
+
+.list article>b{
+    width:82px;
+    height:82px;
+
+    border-radius:14px;
+
+    background:#17213a;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    padding:0;
+
+    flex-shrink:0;
+
+    border:1px solid #273657;
+}
+
+.list article>b img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+    object-position:center;
+
+    padding:0;
+    margin:0;
+
+    border-radius:12px;
+
+    display:block;
+
+    transform:scale(1.10);
+}
+
+
+/* =========================
+   TEXTO LISTAS
+========================= */
+
+.list strong{
+    font-size:14px;
+    display:block;
+    margin-bottom:2px;
+}
+
+.list small{
+    display:block;
+
+    color:#8993a7;
+
+    font-size:10px;
+
+    line-height:1.5;
+}
+
+
+/* =========================
+   BOTONES VISITAR
+   MINERÍA + ENCUESTAS
+========================= */
+
+.list article>a{
+
+    background:linear-gradient(
+        100deg,
+        #463cff,
+        #7935e7
+    );
+
+    border:1px solid #6659ff;
+
+    color:#fff;
+
+    border-radius:8px;
+
+    padding:12px 22px;
+
+    min-width:110px;
+
+    text-align:center;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:.3px;
+
+    box-shadow:
+        0 6px 20px #463cff44;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease,
+        background .2s ease;
+}
+
+.list article>a:hover{
+
+    background:linear-gradient(
+        100deg,
+        #554aff,
+        #8a42f0
+    );
+
+    border-color:#8074ff;
+
+    color:#fff;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 9px 28px #463cff70;
+}
+
+
+/* =========================
+   RECOMENDADOS
+========================= */
+
+.recommend{
+    padding:30px;
+
+    background:#0d1427;
+
+    border:1px solid #222d48;
+
+    border-radius:14px;
+}
+
+.recommend p{
+    color:#8f99ad;
+}
+
+.recommend li{
+    color:#a9b2c5;
+    margin-bottom:8px;
+}
+
+
+/* =========================
+   COMO FUNCIONA
+========================= */
+
+.how{
+    width:100%;
+
+    border:1px solid #202b45;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    background:#0b1222;
+}
+
+.how>div{
+    padding:38px;
+}
+
+.how h2{
+    margin-top:0;
+    margin-bottom:30px;
+    font-size:28px;
+}
+
+.steps{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+}
+
+.steps>div{
+    display:flex;
+
+    gap:15px;
+
+    align-items:flex-start;
+}
+
+.steps b{
+    min-width:46px;
+
+    height:46px;
+
+    border:1px solid #7358ff;
+
+    border-radius:50%;
+
+    display:grid;
+
+    place-items:center;
+
+    color:#a594ff;
+
+    font-size:16px;
+}
+
+.steps strong,
+.steps small{
+    display:block;
+}
+
+.steps strong{
+    font-size:14px;
+}
+
+.steps small{
+    color:#8993a7;
+
+    margin-top:7px;
+
+    font-size:11px;
+
+    line-height:1.6;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    border-top:1px solid #18223a;
+
+    padding:30px 0;
+
+    color:#8791a5;
+
+    font-size:10px;
+}
+
+.footer{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.footer>div a:hover{
+    color:#fff;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+    nav{
+        gap:10px;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .art{
+        min-height:280px;
+        margin-top:20px;
+    }
+
+    .art img{
+        max-width:400px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    .stats div:nth-child(2){
+        border:0;
+    }
+
+    .two{
+        grid-template-columns:1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .circle{
+        width:115px;
+        height:115px;
+    }
+
+    .list article{
+        grid-template-columns:76px 1fr auto;
+    }
+
+    .list article>b{
+        width:76px;
+        height:76px;
+    }
+
+    /* BOTONES VISITAR TABLET */
+
+    .list article>a{
+        min-width:105px;
+        padding:11px 17px;
+        font-size:10px;
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width:650px){
+
+    .menu{
+        display:block;
+    }
+
+    nav{
+
+        display:none;
+
+        position:absolute;
+
+        top:74px;
+
+        left:0;
+        right:0;
+
+        padding:18px 4%;
+
+        background:#060a15;
+
+        flex-direction:column;
+
+        border-bottom:1px solid #18223a;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:45px 0;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .art{
+        min-height:240px;
+        margin-top:10px;
+    }
+
+    .art img{
+        max-width:330px;
+    }
+
+    .trust{
+        display:grid;
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .how>div{
+        padding:25px;
+    }
+
+    .how h2{
+        font-size:24px;
+    }
+
+    .title{
+        align-items:flex-start;
+        gap:15px;
+        flex-direction:column;
+    }
+
+    .footer{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+
+    /* =========================
+       BOTONES HERO CELULAR
+    ========================= */
+
+    .actions{
+        width:100%;
+        max-width:none;
+
+        display:flex;
+        flex-direction:column;
+
+        gap:10px;
+    }
+
+    .main-buttons,
+    .support-buttons{
+
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:8px;
+
+        width:100%;
+    }
+
+    .actions .btn{
+        width:100%;
+
+        padding:13px 8px;
+
+        font-size:10px;
+    }
+
+
+    /* =========================
+       ICONOS FAUCETS CELULAR
+    ========================= */
+
+    .circle{
+        width:115px;
+        height:115px;
+
+        margin-bottom:10px;
+    }
+
+    .card{
+        min-height:350px;
+    }
+
+
+    /* =========================
+       ICONOS LISTAS CELULAR
+    ========================= */
+
+    .list article{
+
+        grid-template-columns:76px 1fr;
+
+        min-height:95px;
+
+        gap:12px;
+    }
+
+    .list article>b{
+
+        width:76px;
+        height:76px;
+    }
+
+
+    /* =========================
+       BOTONES VISITAR CELULAR
+    ========================= */
+
+    .list article>a{
+
+        grid-column:2;
+
+        width:100%;
+
+        min-width:0;
+
+        padding:13px 20px;
+
+        font-size:11px;
+
+        font-weight:800;
+
+        border-radius:8px;
+
+        text-align:center;
+
+        box-shadow:
+            0 6px 20px #463cff44;
+    }
+}
+
+
+/* =========================
+   CELULAR PEQUEÑO
+========================= */
+
+@media(max-width:420px){
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .art img{
+        max-width:290px;
+    }
+
+
+    /* BOTONES HERO */
+
+    .main-buttons,
+    .support-buttons{
+        grid-template-columns:1fr;
+    }
+
+    .actions .btn{
+        width:100%;
+        padding:13px;
+    }
+
+
+    /* ICONOS GRANDES */
+
+    .circle{
+        width:105px;
+        height:105px;
+    }
+
+    .card{
+        min-height:340px;
+    }
+
+
+    /* LISTAS */
+
+    .list article{
+
+        grid-template-columns:68px 1fr;
+
+        min-height:88px;
+
+        gap:10px;
+    }
+
+    .list article>b{
+
+        width:68px;
+        height:68px;
+    }
+
+
+    /* BOTONES VISITAR PEQUEÑO */
+
+    .list article>a{
+
+        grid-column:2;
+
+        width:100%;
+
+        padding:12px 16px;
+
+        font-size:10px;
+
+        min-width:0;
+    }
+
+
+    /* ESTADÍSTICAS */
+
+    .stats{
+        padding:15px;
+    }
+
+    .stats b{
+        font-size:17px;
+    }
+}
