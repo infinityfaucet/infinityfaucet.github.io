@@ -1008,6 +1008,33 @@ footer{
 
 
 /* =========================
+   PUBLICIDAD
+========================= */
+
+.ad-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    margin:30px auto;
+    overflow:hidden;
+}
+
+.ad-468{
+    min-height:60px;
+}
+
+.ad-320{
+    min-height:50px;
+}
+
+.ad-native{
+    min-height:100px;
+}
+
+
+/* =========================
    TABLET
 ========================= */
 
@@ -1260,6 +1287,30 @@ footer{
         box-shadow:
             0 6px 20px #463cff44;
     }
+
+
+    /* =========================
+       PUBLICIDAD CELULAR
+    ========================= */
+
+    .ad-container{
+        margin:25px auto;
+        max-width:100%;
+    }
+
+    .ad-468{
+        min-height:60px;
+        overflow-x:auto;
+    }
+
+    .ad-320{
+        min-height:50px;
+    }
+
+    .ad-native{
+        min-height:100px;
+    }
+
 }
 
 
@@ -1346,4 +1397,14 @@ footer{
     .stats b{
         font-size:17px;
     }
+
+
+    /* =========================
+       PUBLICIDAD CELULAR PEQUEÑO
+    ========================= */
+
+    .ad-container{
+        margin:20px auto;
+    }
+
 }
